@@ -1,0 +1,52 @@
+:root {
+  --grey-hover: rgb(235, 235, 235);
+  --airbnb-pink: #ff385c;
+  --dark-background: black;
+  --dark-caption: rgb(34, 34, 34);
+  --grey-footer: #f7f7f7;
+  --font-colour: #222222;
+  --inactive: rgb(176, 176, 176);
+}
+
+.country {
+  color: rgb(113, 113, 113);
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.language {
+  color: black;
+  font-weight: 400;
+  font-size: 12px;
+}
+/* .modal-dialog {
+  width: 800px;
+  background: white;
+} */
+
+.language-cells {
+  background: transparent;
+  cursor: pointer;
+  margin: 0px;
+  text-align: inherit;
+  text-decoration: none;
+  user-select: auto;
+  line-height: 18px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  color: var(--font-colour);
+  display: block;
+  padding: 9px 12px;
+}
+.language-cells:hover {
+  background-color: var(--grey-hover);
+}
+.language-cells:focus {
+  border: 1px solid black;
+}
+.language-modal {
+  max-height: calc(100vh - 210px);
+  overflow-y: auto;
+  max-width: none !important;
+  padding: 20px;
+}
