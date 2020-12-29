@@ -3,6 +3,8 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import BottomIndex from "./Components/BottomIndex/BottomIndex";
 import LanguageModal from "./Components/LanguageModal/LanguageModal";
+import HeroSection from "./Components/HeroSection/HeroSection"
+import LocationIcons from "./Components/LocationIcons/LocationIcons";
 
 class App extends Component {
   state = {
@@ -20,6 +22,8 @@ class App extends Component {
 
     return (
       <div>
+        <HeroSection/>
+        <LocationIcons/>
         <BottomIndex toggleModal={this.handleModalToggle}/>
         <LanguageModal
           showModal={showModal}

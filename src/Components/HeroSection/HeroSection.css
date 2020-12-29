@@ -1,0 +1,8 @@
+.hero-image {
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  max-height: 500px;
+}
