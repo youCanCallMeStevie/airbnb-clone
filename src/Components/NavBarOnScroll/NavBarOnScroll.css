@@ -1,4 +1,4 @@
-@media only screen and (max-width: 755px) {
+@media only screen and (max-width: 1000px) {
   .navbar-onscroll-container {
     display: none !important;
   }
@@ -22,7 +22,7 @@
 
 .searchbox-button {
   margin: auto;
-  width: 400px;
+  width: 500px;
   height: 40px;
   border: 1px solid var(--grey-footer);
   border-radius: 50px;

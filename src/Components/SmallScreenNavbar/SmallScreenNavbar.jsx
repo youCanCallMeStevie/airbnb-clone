@@ -8,6 +8,7 @@ export default function SmallScreenNavbar({handleChange, handleSubmit}) {
     <div className="small-navbar-container">
       <div className="searchbox-area">
           <SearchIcon fontSize="large"/>
+          <p>Where are you going?</p>
         {/* <Form.Group controlId="searchLocation" >
           <Form.Control type="text" placeholder="Where are you going?" />
         </Form.Group> */}

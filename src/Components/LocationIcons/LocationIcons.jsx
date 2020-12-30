@@ -11,7 +11,7 @@ function LocationIcons() {
     <div>
       <Container fluid>
         <Row style={{ marginLeft: "20px", marginBottom: "20px" }}>
-          <Col xs={12} sm={6} md={3}>
+          <Col xs={6} md={3}>
             <Row className="suggested-cells">
               <Image src={Icon1} className="location-icons" />
               <Col style={{ marginLeft: "10px" }}>
@@ -27,7 +27,7 @@ function LocationIcons() {
               </Col>
             </Row>
           </Col>
-          <Col xs={12} sm={6} md={3}>
+          <Col xs={6} md={3}>
             {" "}
             <Row className="suggested-cells">
               <Image src={Icon2} className="location-icons" />{" "}
@@ -44,7 +44,7 @@ function LocationIcons() {
               </Col>
             </Row>
           </Col>
-          <Col xs={12} sm={6} md={3}>
+          <Col xs={6} md={3}>
             {" "}
             <Row className="suggested-cells">
               <Image src={Icon2} className="location-icons" />{" "}
@@ -61,7 +61,7 @@ function LocationIcons() {
               </Col>
             </Row>
           </Col>
-          <Col xs={12} sm={6} md={3}>
+          <Col xs={6} md={3}>
             {" "}
             <Row className="suggested-cells">
               <Image src={Icon4} className="location-icons" />{" "}
