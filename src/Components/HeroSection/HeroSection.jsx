@@ -1,5 +1,5 @@
 import React from "react";
-import { Jumbotron, Container,Image } from "react-bootstrap";
+import { Image } from "react-bootstrap";
 import Background from "../../Assets/Cartoons/moutain_cottage_cartoon_jumbotron.png";
 import "../HeroSection/HeroSection.css";
 

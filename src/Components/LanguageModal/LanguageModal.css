@@ -50,3 +50,7 @@
   max-width: none !important;
   padding: 20px;
 }
+
+.selectedItem {
+  border: 1px solid black;
+}

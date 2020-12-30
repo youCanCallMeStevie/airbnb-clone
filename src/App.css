@@ -16,3 +16,7 @@
   min-height: 100vh;
   font-family: "Nunito Sans", sans-serif;
 }
+
+.selectedItem {
+  border: 50px solid black;
+}
