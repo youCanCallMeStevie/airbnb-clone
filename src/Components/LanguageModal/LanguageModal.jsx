@@ -1,5 +1,6 @@
 import React from "react";
 import { Modal, Col, Row } from "react-bootstrap";
+import PinkLogo from "../../Assets/AirBnb-Logos/airbnb_pink_solo_logo.png";
 import "../LanguageModal/LanguageModal.css";
 
 function LanguageModal({ toggleModal, showModal, selectedItem }) {
@@ -10,20 +11,27 @@ function LanguageModal({ toggleModal, showModal, selectedItem }) {
         onHide={toggleModal}
         // backdrop="static"
         // keyboard={false}
+        contentClassName="custom-modal-style"
         
       >
         <Modal.Header closeButton>
-          <Modal.Title></Modal.Title>
+          <Modal.Title><img
+            src={PinkLogo}
+            width="40"
+            height="40"
+            className="d-inline-block ml-3"
+            alt="AirBnB logo"
+          /></Modal.Title>
         </Modal.Header>
         <Modal.Body className="language-modal">
-          <h2>Suggested languge and region</h2>
+          <h3>Suggested languge and region</h3>
           <Row>
               <Col xs={6} md={3} className="language-cells">
                 <div className="language">English</div>
                 <div className="country">United States</div>
               </Col>
               </Row>
-          <h2>Choose a language and region</h2>
+          <h3>Choose a language and region</h3>
           <div >
             <Row>
               <Col xs={6} md={3} className="language-cells" tabindex="-1">

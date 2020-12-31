@@ -60,23 +60,13 @@ function BottomIndex({ toggleModal }) {
             </Row>
           </Col>
           <Col>
-            <Row>
+            <Row className="social-icon-wrapper">
               <span className="choose-language" onClick={() => toggleModal()}>
-                <LanguageIcon
-                  style={{ fontSize: "18px", marginRight: "8px" }}
-                />{" "}
-                English(GB)
+                <LanguageIcon /> English(GB)
               </span>
-              £ GBP{" "}
-              <FacebookIcon
-                style={{
-                  fontSize: "18px",
-                  marginRight: "8px",
-                  marginLeft: "8px",
-                }}
-              />
-              <TwitterIcon style={{ fontSize: "18px", marginRight: "8px" }} />
-              <InstagramIcon style={{ fontSize: "18px" }} />
+              £ GBP <FacebookIcon />
+              <TwitterIcon />
+              <InstagramIcon />
             </Row>
           </Col>
         </Row>
@@ -140,26 +130,16 @@ function BottomIndex({ toggleModal }) {
         </Col>
         <hr></hr>
         <Col className="">
-          <Row style={{ justifyContent: "center" }}>
+          <Row className="social-icon-wrapper">
             <span className="choose-language" onClick={() => toggleModal()}>
-              <LanguageIcon style={{ fontSize: "18px", marginRight: "8px" }} />{" "}
-              English(GB)
+              <LanguageIcon /> English(GB)
             </span>
-            £ GBP{" "}
-            <FacebookIcon
-              style={{
-                fontSize: "18px",
-                marginRight: "8px",
-                marginLeft: "8px",
-              }}
-            />
-            <TwitterIcon style={{ fontSize: "18px", marginRight: "8px" }} />
-            <InstagramIcon style={{ fontSize: "18px" }} />{" "}
+            £ GBP <FacebookIcon />
+            <TwitterIcon />
+            <InstagramIcon />{" "}
           </Row>
-          <Row style={{ justifyContent: "center" }}>
-            © 2020 Airbnb, Inc. All rights reserved
-          </Row>
-          <Row style={{ justifyContent: "center" }}>
+          <Row>© 2020 Airbnb, Inc. All rights reserved</Row>
+          <Row>
             ·Privacy·Terms·Sitemap·UK Modern Slavery Act·Company details
           </Row>
         </Col>
@@ -213,21 +193,13 @@ function BottomIndex({ toggleModal }) {
         </Col>
         <hr></hr>
         <Col>
-          <Row>
+          <Row className="social-icon-wrapper">
             <span className="choose-language" onClick={() => toggleModal()}>
-              <LanguageIcon style={{ fontSize: "18px", marginRight: "8px" }} />{" "}
-              English(GB)
+              <LanguageIcon /> English(GB)
             </span>{" "}
-            £ GBP{" "}
-            <FacebookIcon
-              style={{
-                fontSize: "18px",
-                marginRight: "8px",
-                marginLeft: "8px",
-              }}
-            />
-            <TwitterIcon style={{ fontSize: "18px", marginRight: "8px" }} />
-            <InstagramIcon style={{ fontSize: "18px" }} />{" "}
+            £ GBP <FacebookIcon />
+            <TwitterIcon />
+            <InstagramIcon />{" "}
           </Row>
           <Row>© 2020 Airbnb, Inc. All rights reserved</Row>
           <Row>

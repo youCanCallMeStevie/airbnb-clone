@@ -24,3 +24,9 @@
   color: var(--airbnb-pink);
   cursor: pointer;
 }
+
+.social-icon-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

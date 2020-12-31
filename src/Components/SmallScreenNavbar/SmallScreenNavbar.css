@@ -23,7 +23,7 @@
   height: 40px;
   border: 1px solid var(--grey-footer);
   border-radius: 50px;
-  box-shadow: 0 0.5em 0.5em -0.4em var(--grey-footer);
+  box-shadow: var(--box-shadow);
 }
 
 .searchbox-area p {

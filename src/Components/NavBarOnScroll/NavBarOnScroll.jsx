@@ -6,8 +6,14 @@ import SearchIcon from "@material-ui/icons/Search";
 import LanguageIcon from "@material-ui/icons/Language";
 import MenuIcon from "@material-ui/icons/Menu";
 import PersonOutlineIcon from "@material-ui/icons/PersonOutline";
+import UserDropDownMenu from "../UserDropDownMenu/UserDropDownMenu";
 
-export default function NavBarOnScroll({handleChange, handleSubmit}) {
+export default function NavBarOnScroll({
+  handleChange,
+  handleSubmit,
+  clicked,
+  handleClick
+}) {
   return (
     <div className="navbar-onscroll-container">
       <Navbar>
@@ -44,9 +50,12 @@ export default function NavBarOnScroll({handleChange, handleSubmit}) {
             <p>Switch to hosting</p>
             <LanguageIcon />
           </div>
-          <div className="user-hamburger-wrapper">
+          <div onClick={handleClick}>
+            {clicked ? <UserDropDownMenu /> : null}
+          <div className="user-hamburger-wrapper" >
             <MenuIcon />
             <PersonOutlineIcon />
+          </div>
           </div>
         </div>
       </Navbar>

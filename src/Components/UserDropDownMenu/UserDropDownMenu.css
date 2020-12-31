@@ -1,0 +1,22 @@
+.dropdown-container.card {
+  position: absolute;
+  top: 60px;
+  right: 50px;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--popup-border-radius) !important;
+  border: 1px solid var(--grey-footer);
+}
+
+.dropdown-container.card .list-group-item {
+  background: transparent;
+}
+
+.dropdown-heading,
+.dropdown-subheading {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.dropdown-subheading {
+  font-weight: 400;
+}

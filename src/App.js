@@ -15,6 +15,7 @@ class App extends Component {
     loading: true,
     error: false,
     selected: false,
+    clicked: false,
   };
   handleModalToggle = async () => {
     this.setState({
@@ -23,7 +24,7 @@ class App extends Component {
   };
 
 
-  selectedItem = (e) => {
+selectedItem = (e) => {
     const element = e.currentTarget;
     element.classList.toggle("selectedItem")
 }
@@ -34,16 +35,27 @@ handleChange(event) {
 }
 
 handleSubmit(event) {
-  alert('A name was submitted: ' + this.state.value);
+  alert('Thank you for posting your accomidation');
   event.preventDefault();
 }
+
+handleClick= async () => {
+  this.setState({
+  clicked: !this.state.clicked
+});
+}
   render() {
-    const { showModal, loading } = this.state;
+    const {  showModal,
+      loading,
+      error,
+      selected,
+      clicked } = this.state;
 
     return (
       <div>
         <SmallScreenNavbar handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
-        <NavBarOnScroll handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
+        <NavBarOnScroll handleChange={this.handleChange} handleSubmit={this.handleSubmit} clicked={clicked}
+          handleClick={this.handleClick}/>
         <HeroSection/>
         <LocationIcons/>
         <BottomIndex toggleModal={this.handleModalToggle}/>

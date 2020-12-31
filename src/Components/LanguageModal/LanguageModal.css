@@ -54,3 +54,9 @@
 .selectedItem {
   border: 1px solid black;
 }
+
+.custom-modal-style {
+  height: 80vh;
+  margin: auto;
+  border-radius: var(--popup-border-radius);
+}
