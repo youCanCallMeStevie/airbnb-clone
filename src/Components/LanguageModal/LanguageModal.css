@@ -58,5 +58,5 @@
 .custom-modal-style {
   height: 80vh;
   margin: auto;
-  border-radius: var(--popup-border-radius);
+  border-radius: var(--border-radius);
 }

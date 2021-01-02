@@ -3,7 +3,7 @@
   top: 60px;
   right: 50px;
   box-shadow: var(--box-shadow);
-  border-radius: var(--popup-border-radius) !important;
+  border-radius: var(--border-radius) !important;
   border: 1px solid var(--grey-footer);
 }
 

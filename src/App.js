@@ -7,6 +7,10 @@ import HeroSection from "./Components/HeroSection/HeroSection"
 import LocationIcons from "./Components/LocationIcons/LocationIcons";
 import NavBarOnScroll from "./Components/NavBarOnScroll/NavBarOnScroll";
 import SmallScreenNavbar from "./Components/SmallScreenNavbar/SmallScreenNavbar";
+import TypesOfListings from "./Components/TypesOfListings/TypesOfListings";
+import HostsBlock from "./Components/HostsBlock/HostsBlock";
+import OnlineExpHome from "./Components/OnlineExpHome/OnlineExpHome";
+
 
 
 class App extends Component {
@@ -55,9 +59,12 @@ handleClick= async () => {
       <div>
         <SmallScreenNavbar handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
         <NavBarOnScroll handleChange={this.handleChange} handleSubmit={this.handleSubmit} clicked={clicked}
-          handleClick={this.handleClick}/>
+          handleClick={this.handleClick} toggleModal={this.handleModalToggle}/>
         <HeroSection/>
         <LocationIcons/>
+        <TypesOfListings/>
+        <OnlineExpHome/>
+        <HostsBlock/>
         <BottomIndex toggleModal={this.handleModalToggle}/>
         <LanguageModal
           showModal={showModal}

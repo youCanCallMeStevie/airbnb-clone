@@ -12,7 +12,8 @@ export default function NavBarOnScroll({
   handleChange,
   handleSubmit,
   clicked,
-  handleClick
+  handleClick,
+  toggleModal
 }) {
   return (
     <div className="navbar-onscroll-container">
@@ -47,8 +48,9 @@ export default function NavBarOnScroll({
             </div>
           </input> */}
           <div className="hosting-wrapper">
-            <p>Switch to hosting</p>
-            <LanguageIcon />
+            <span><p>Switch to hosting</p></span>
+            <span className="choose-language" onClick={() => toggleModal()}>
+ <LanguageIcon /> </span>
           </div>
           <div onClick={handleClick}>
             {clicked ? <UserDropDownMenu /> : null}

@@ -7,11 +7,10 @@ import "../HeroSection/HeroSection.css";
 function HeroSection() {
   return (
     <div>
-      <div className="mainframe">
-        <div className="main-content">
-          <Image src={Background} className="hero-image" />
-         </div>
-         </div>
+   <Image src={Background} className="hero-image" />
+          <div className="hero-text">go<br></br>near</div>
+          <div className="hero-button"></div>
+
     </div>
   );
 }
