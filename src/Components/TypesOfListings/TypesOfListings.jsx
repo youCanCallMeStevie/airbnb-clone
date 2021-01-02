@@ -25,13 +25,13 @@ class TypesOfListings extends React.Component {
       0: {
         items: 1,
       },
-      500: {
+      400: {
         items: 2,
       },
-      750: {
+      900: {
         items: 3,
       },
-      1024: {
+      1125: {
         items: 4,
       },
     };
@@ -39,6 +39,8 @@ class TypesOfListings extends React.Component {
     // function TypesOfListings() {
 
     return (
+        <Container fluid>       <h2>Live anywhere</h2>
+
       <AliceCarousel
         duration={400}
         autoPlay={true}
@@ -53,48 +55,25 @@ class TypesOfListings extends React.Component {
         onSlideChange={this.onSlideChange}
         onSlideChanged={this.onSlideChanged}
       >
-        <img className="listing-type-individual" src={EntireHomes} />
-        <img className="listing-type-individual" src={CabinsCottages} />
-        <img className="listing-type-individual" src={UniqueExperiences} />
-        <img className="listing-type-individual" src={PetsWelcome} />
+        <div>
+          <img className="listing-type-individual" src={EntireHomes} />
+          <p>Entire homes</p>
+        </div>
+
+        <div>
+          <img className="listing-type-individual" src={CabinsCottages} />
+          <p>Cabins & Cottages</p>
+        </div>
+        <div>
+          <img className="listing-type-individual" src={UniqueExperiences} />
+          <p>Unique Experiences</p>
+        </div>
+        <div>
+          <img className="listing-type-individual" src={PetsWelcome} />
+          <p>Pets Welcome</p>
+        </div>
       </AliceCarousel>
-      //     <Container fluid>
-      //       <h2 style={{ marginLeft: "30px" }}>Live anywhere</h2>
-      //       <div className="types-of-listings-container">
-      //         <div>
-      //           <img
-      //             src={EntireHomes}
-      //             alt="Entire home"
-      //             className="listing-type-individual"
-      //           />
-      //           <p>Entire Homes</p>
-      //         </div>
-      //         <div>
-      //           <img
-      //             src={CabinsCottages}
-      //             alt="Cabins & cottges"
-      //             className="listing-type-individual"
-      //           />
-      //           <p>Cabins Cottges</p>
-      //         </div>
-      //         <div>
-      //           <img
-      //             src={UniqueExperiences}
-      //             alt="Unique experiences"
-      //             className="listing-type-individual"
-      //           />
-      //           <p>Unique Experiences</p>
-      //         </div>
-      //         <div>
-      //           <img
-      //             src={PetsWelcome}
-      //             alt="Pets welcome"
-      //             className="listing-type-individual"
-      //           />
-      //           <p>Pets Welcome</p>
-      //         </div>
-      //       </div>
-      //     </Container>
+      </Container>
     );
   }
 }
