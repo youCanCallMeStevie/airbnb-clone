@@ -10,6 +10,7 @@ import SmallScreenNavbar from "./Components/SmallScreenNavbar/SmallScreenNavbar"
 import TypesOfListings from "./Components/TypesOfListings/TypesOfListings";
 import HostsBlock from "./Components/HostsBlock/HostsBlock";
 import OnlineExpHome from "./Components/OnlineExpHome/OnlineExpHome";
+import Testing from "./Components/Testing";
 
 
 

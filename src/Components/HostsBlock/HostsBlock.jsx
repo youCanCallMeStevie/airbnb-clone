@@ -10,7 +10,7 @@ function HostsBlock() {
     <Container fluid>
       <h2>Join millions of hosts on Airbnb</h2>
       <div className="types-of-hosts-container">
-        <div>
+        <div style={{marginRight:"20px"}}>
           <img
             src={HostHome}
             alt="Entire home"
@@ -18,7 +18,7 @@ function HostsBlock() {
           />
           <p>Host your home</p>
         </div>
-        <div>
+        <div style={{marginRight:"20px"}}>
           <img
             src={HostAnExpereince}
             alt="Host an expereince"
@@ -26,7 +26,7 @@ function HostsBlock() {
           />
           <p>Host an experience</p>
         </div>
-        <div>
+        <div style={{marginRight:"20px"}}>
           <img
             src={HostOnline}
             alt="Unique experiences"
