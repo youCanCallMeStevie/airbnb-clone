@@ -7,6 +7,7 @@ import LanguageIcon from "@material-ui/icons/Language";
 import MenuIcon from "@material-ui/icons/Menu";
 import PersonOutlineIcon from "@material-ui/icons/PersonOutline";
 import UserDropDownMenu from "../UserDropDownMenu/UserDropDownMenu";
+import { Divider } from "@material-ui/core";
 
 export default function ExpandedSearchBar(
   {
@@ -68,28 +69,41 @@ export default function ExpandedSearchBar(
               </div>
             </div>
           </Row>
-          <Row className="mt-2">
-            <div className="search-filter-box">
-              <Row>
-                <Col>
-                  <p>Location </p>
+          <Row className="mt-2 search-filter-box">
+            
+              <Row className="search-filter-items">
+                <Col md="auto" className="search-filter-item">
+                <p>Location</p>
+
+                <p className="text-muted" style={{fontWeight:"400"}}>Where are you going?</p>
+
                 </Col>
-                <Col>
+                <Divider orientation="vertical" flexItem />
+                <Col md="auto" className="search-filter-item">
                   <p>Check in </p>
+                  <p className="text-muted" style={{fontWeight:"400"}}>Add dates</p>
                 </Col>
-                <Col>
+                <Divider orientation="vertical" flexItem />
+
+                <Col md="auto" className="search-filter-item">
                   <p>Check out </p>
+                  <p className="text-muted" style={{fontWeight:"400"}}>Add dates</p>
+
                 </Col>
-                <Col>
+                <Divider orientation="vertical" flexItem />
+
+                <Col md="auto" className="search-filter-item">
                   <p>Guests </p>
+                  <p className="text-muted" style={{fontWeight:"400"}}>Add guests</p>
+
                 </Col>
-                <Col>
-                  <span className="search-background">
-                    <SearchIcon />
-                  </span>
+                <Col md="auto">
+                  <div className="expanded-search-background">
+                    <span><SearchIcon /></span><span><p>Search</p></span>
+                  </div>
                 </Col>
               </Row>
-            </div>
+           
           </Row>
         </Col>
     </div>
