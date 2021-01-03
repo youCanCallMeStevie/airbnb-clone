@@ -1,3 +1,15 @@
+@media only screen and (max-width: 575px) {
+  .hero-text {
+    font-size: 60px !important;
+    top: 12% !important;
+  }
+}
+
+@media only screen and (max-width: 356px) {
+  .hero-text {
+    display: none;
+  }
+}
 .hero-image {
   width: 100%;
   top: 0;

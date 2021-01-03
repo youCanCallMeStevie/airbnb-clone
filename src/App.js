@@ -3,16 +3,13 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import BottomIndex from "./Components/BottomIndex/BottomIndex";
 import LanguageModal from "./Components/LanguageModal/LanguageModal";
-import HeroSection from "./Components/HeroSection/HeroSection"
+import HeroSection from "./Components/HeroSection/HeroSection";
 import LocationIcons from "./Components/LocationIcons/LocationIcons";
 import NavBarOnScroll from "./Components/NavBarOnScroll/NavBarOnScroll";
 import SmallScreenNavbar from "./Components/SmallScreenNavbar/SmallScreenNavbar";
 import TypesOfListings from "./Components/TypesOfListings/TypesOfListings";
 import HostsBlock from "./Components/HostsBlock/HostsBlock";
 import OnlineExpHome from "./Components/OnlineExpHome/OnlineExpHome";
-import Testing from "./Components/Testing";
-
-
 
 class App extends Component {
   state = {
@@ -21,6 +18,7 @@ class App extends Component {
     error: false,
     selected: false,
     clicked: false,
+    showSearch: false,
   };
   handleModalToggle = async () => {
     this.setState({
@@ -28,45 +26,62 @@ class App extends Component {
     });
   };
 
-
-selectedItem = (e) => {
+  selectedItem = e => {
     const element = e.currentTarget;
-    element.classList.toggle("selectedItem")
-}
+    element.classList.toggle("selectedItem");
+  };
 
+  handleChange(event) {
+    this.setState({ value: event.target.value });
+  }
 
-handleChange(event) {
-  this.setState({value: event.target.value});
-}
+  handleSubmit(event) {
+    alert("Thank you for posting your accomidation");
+    event.preventDefault();
+  }
 
-handleSubmit(event) {
-  alert('Thank you for posting your accomidation');
-  event.preventDefault();
-}
+  handleClick = async () => {
+    this.setState({
+      clicked: !this.state.clicked,
+    });
+  };
 
-handleClick= async () => {
-  this.setState({
-  clicked: !this.state.clicked
-});
-}
+  expandSearch = async () => {
+    this.setState({
+      showSearch: !this.state.showSearch,
+    });
+  };
   render() {
-    const {  showModal,
+    const {
+      showModal,
+      showSearch,
       loading,
       error,
       selected,
-      clicked } = this.state;
+      clicked,
+    } = this.state;
 
     return (
       <div>
-        <SmallScreenNavbar handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
-        <NavBarOnScroll handleChange={this.handleChange} handleSubmit={this.handleSubmit} clicked={clicked}
-          handleClick={this.handleClick} toggleModal={this.handleModalToggle}/>
-        <HeroSection/>
-        <LocationIcons/>
-        <TypesOfListings/>
-        <OnlineExpHome/>
-        <HostsBlock/>
-        <BottomIndex toggleModal={this.handleModalToggle}/>
+        <SmallScreenNavbar
+          handleChange={this.handleChange}
+          handleSubmit={this.handleSubmit}
+        />
+        <NavBarOnScroll
+          handleChange={this.handleChange}
+          handleSubmit={this.handleSubmit}
+          showSearch={showSearch}
+          expandSearch={this.expandSearch}
+          clicked={clicked}
+          handleClick={this.handleClick}
+          toggleModal={this.handleModalToggle}
+        />
+        <HeroSection />
+        <LocationIcons />
+        <TypesOfListings />
+        <OnlineExpHome />
+        <HostsBlock />
+        <BottomIndex toggleModal={this.handleModalToggle} />
         <LanguageModal
           showModal={showModal}
           toggleModal={this.handleModalToggle}

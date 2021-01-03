@@ -7,10 +7,13 @@ import LanguageIcon from "@material-ui/icons/Language";
 import MenuIcon from "@material-ui/icons/Menu";
 import PersonOutlineIcon from "@material-ui/icons/PersonOutline";
 import UserDropDownMenu from "../UserDropDownMenu/UserDropDownMenu";
+import ExpandedSearchBar from "../ExpandedSearchBar/ExpandedSearchBar";
 
 export default function NavBarOnScroll({
   handleChange,
   handleSubmit,
+  showSearch,
+  expandSearch,
   clicked,
   handleClick,
   toggleModal
@@ -28,25 +31,15 @@ export default function NavBarOnScroll({
           />
         </Navbar.Brand>
         <div className="navbar-item-wrap">
-          <div className="searchbox-button">
-            <p style={{ top: "8px" }}>
+          <div className="searchbox-button" onClick={expandSearch}>
+            {showSearch ? <ExpandedSearchBar /> : null}
+            <p>
               Start your search
-              <div className="search-background">
+              <span className="search-background">
                 <SearchIcon />
-              </div>
+              </span>
             </p>
           </div>
-          {/* <input
-            className="searchbox-button"
-            type="text"
-            // value={this.state.value}
-            onChange={handleChange}
-            placeholder="Start your search"
-          >
-            <div className="search-background">
-              <SearchIcon />
-            </div>
-          </input> */}
           <div className="hosting-wrapper">
             <span><p>Switch to hosting</p></span>
             <span className="choose-language" onClick={() => toggleModal()}>

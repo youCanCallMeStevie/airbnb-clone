@@ -9,3 +9,26 @@
   font-weight: 500;
   letter-spacing: 0.05em;
 }
+
+/* .alice-carousel__next-btn {
+  position: absolute;
+  top: 25%;
+}
+
+.alice-carousel__next-btn-wrapper {
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  box-shadow: 0.25em 0.25em 0.25em 0.1em rgba(43, 43, 43, 0.125);
+}
+.alice-carousel__next-btn-item {
+  justify-content: center;
+}
+
+.alice-carousel__next-btn-item ~ p {
+  position: absolute;
+  /* top: 15%;
+  left: 15%;
+  font-size: 30px;
+} */

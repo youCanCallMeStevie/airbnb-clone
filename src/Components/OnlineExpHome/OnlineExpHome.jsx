@@ -1,10 +1,11 @@
 import React from 'react'
+import { Container } from 'react-bootstrap'
 
 function OnlineExpHome() {
     return (
-        <div className="online-expereince-container">
-            
-        </div>
+
+        <Container fluid className="online-expereince-container" >
+        </Container>
     )
 }
 

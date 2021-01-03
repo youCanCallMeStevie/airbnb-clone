@@ -25,13 +25,13 @@ class TypesOfListings extends React.Component {
       0: {
         items: 1,
       },
-      400: {
+      550: {
         items: 2,
       },
-      900: {
+      815: {
         items: 3,
       },
-      1125: {
+      1120: {
         items: 4,
       },
     };
@@ -48,6 +48,7 @@ class TypesOfListings extends React.Component {
         fadeOutAnimation={true}
         mouseDragEnabled={true}
         playButtonEnabled={true}
+        disableDotsControls={true}
         responsive={responsive}
         autoPlayInterval={2000}
         autoPlayDirection="rtl"
@@ -56,20 +57,20 @@ class TypesOfListings extends React.Component {
         onSlideChanged={this.onSlideChanged}
       >
         <div>
-          <img className="listing-type-individual" src={EntireHomes} />
+          <img className="listing-type-individual" src={EntireHomes} alt="entire homes" />
           <p>Entire homes</p>
         </div>
 
         <div>
-          <img className="listing-type-individual" src={CabinsCottages} />
+          <img className="listing-type-individual" src={CabinsCottages} alt="cabins and cottages" />
           <p>Cabins & Cottages</p>
         </div>
         <div>
-          <img className="listing-type-individual" src={UniqueExperiences} />
+          <img className="listing-type-individual" src={UniqueExperiences} alt="unique experiences"  />
           <p>Unique Experiences</p>
         </div>
         <div>
-          <img className="listing-type-individual" src={PetsWelcome} />
+          <img className="listing-type-individual" src={PetsWelcome} alt="pets are welcomed"  />
           <p>Pets Welcome</p>
         </div>
       </AliceCarousel>

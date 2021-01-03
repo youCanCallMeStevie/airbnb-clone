@@ -5,6 +5,7 @@ import HostOnline from "../../Assets/Photos/host-an-online-experience.png";
 import HostHome from "../../Assets/Photos/host-your-home.png";
 import { Container } from "react-bootstrap";
 
+
 function HostsBlock() {
   return (
     <Container fluid>
