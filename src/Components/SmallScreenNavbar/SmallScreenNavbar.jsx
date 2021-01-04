@@ -20,7 +20,7 @@ export default function SmallScreenNavbar({ handleChange, handleSubmit }) {
             placeholder="Where are you going?"
             onChange={e => setSearch(e.target.value)}
             style={{border:"none", marginTop: "5px", width: "auto"}}
-            // className="searchbox-area"
+            // className="searchbox-area-input"
           />
         </form>
       </div>
