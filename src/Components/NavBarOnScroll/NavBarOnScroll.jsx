@@ -1,7 +1,7 @@
 import React from "react";
 import { Navbar } from "react-bootstrap";
 import "../NavBarOnScroll/NavBarOnScroll.css";
-import PinkLogo from "../../Assets/AirBnb-Logos/airbnb_pink_solo_logo.png";
+import PinkLogo from "../../Assets/AirBnb-Logos/airbnb_pink_logo_no_text.png";
 import SearchIcon from "@material-ui/icons/Search";
 import LanguageIcon from "@material-ui/icons/Language";
 import MenuIcon from "@material-ui/icons/Menu";
@@ -16,10 +16,13 @@ export default function NavBarOnScroll({
   expandSearch,
   clicked,
   handleClick,
-  toggleModal
+  toggleModal,
+  handleOnScroll
 }) {
+  //function to make the top bar appear when scrolling
+ 
   return (
-    <div className="navbar-onscroll-container">
+    <div className="navbar-onscroll-container d-none">
       <Navbar>
         <Navbar.Brand href="#home">
           <img
@@ -32,7 +35,13 @@ export default function NavBarOnScroll({
         </Navbar.Brand>
         <div className="navbar-item-wrap">
           <div className="searchbox-button" onClick={expandSearch}>
-            {showSearch ? <ExpandedSearchBar /> : null}
+            {showSearch || handleOnScroll ? (
+              <ExpandedSearchBar
+                clicked={clicked}
+                handleClick={handleClick}
+                toggleModal={toggleModal}
+              />
+            ) : null}
             <p>
               Start your search
               <span className="search-background">
@@ -41,16 +50,19 @@ export default function NavBarOnScroll({
             </p>
           </div>
           <div className="hosting-wrapper">
-            <span><p>Switch to hosting</p></span>
+            <span>
+              <p>Switch to hosting</p>
+            </span>
             <span className="choose-language" onClick={() => toggleModal()}>
- <LanguageIcon /> </span>
+              <LanguageIcon />{" "}
+            </span>
           </div>
           <div onClick={handleClick}>
             {clicked ? <UserDropDownMenu /> : null}
-          <div className="user-hamburger-wrapper" >
-            <MenuIcon />
-            <PersonOutlineIcon />
-          </div>
+            <div className="user-hamburger-wrapper">
+              <MenuIcon />
+              <PersonOutlineIcon />
+            </div>
           </div>
         </div>
       </Navbar>

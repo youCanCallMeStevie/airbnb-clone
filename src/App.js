@@ -10,6 +10,7 @@ import SmallScreenNavbar from "./Components/SmallScreenNavbar/SmallScreenNavbar"
 import TypesOfListings from "./Components/TypesOfListings/TypesOfListings";
 import HostsBlock from "./Components/HostsBlock/HostsBlock";
 import OnlineExpHome from "./Components/OnlineExpHome/OnlineExpHome";
+import AddDatesForPrices from "./Components/AddDatesForPrices/AddDatesForPrices";
 
 class App extends Component {
   state = {
@@ -51,6 +52,46 @@ class App extends Component {
       showSearch: !this.state.showSearch,
     });
   };
+
+  expandedSearchBoxOnScroll = () => {
+    let currentScrollPos = window.pageYOffset;
+    const maxScroll = document.body.scrollHeight - window.innerHeight;
+    const searchBox = document.querySelector(".expanded-navbar-container");
+    if (searchBox) {
+      if (currentScrollPos <= maxScroll) {
+        searchBox?.classList.add("d-none");
+      } else {
+        searchBox?.classList.remove("d-none");
+      }
+    }
+  };
+
+  navBarOnScroll = () => {
+    let currentScrollPos = window.pageYOffset;
+    const maxScroll = document.body.scrollHeight - window.innerHeight;
+    const topbar = document.querySelector(".navbar-onscroll-container");
+    if (topbar) {
+      if (currentScrollPos < 200 && currentScrollPos <= maxScroll) {
+        topbar?.classList.add("d-none");
+      } else {
+        topbar?.classList.remove("d-none");
+      }
+    }
+  };
+
+  handleOnScroll = () => {
+    if (window) {
+      window.onscroll = () => {
+        this.navBarOnScroll();
+        this.expandedSearchBoxOnScroll();
+      };
+    }
+  };
+  componentDidMount() {
+    console.log(this.state);
+    this.handleOnScroll();
+  }
+
   render() {
     const {
       showModal,
@@ -67,6 +108,7 @@ class App extends Component {
           handleChange={this.handleChange}
           handleSubmit={this.handleSubmit}
         />
+      
         <NavBarOnScroll
           handleChange={this.handleChange}
           handleSubmit={this.handleSubmit}
@@ -75,8 +117,12 @@ class App extends Component {
           clicked={clicked}
           handleClick={this.handleClick}
           toggleModal={this.handleModalToggle}
+          hideExpandedSearch={this.handleOnScroll}
         />
+       
         <HeroSection />
+        <AddDatesForPrices />
+
         <LocationIcons />
         <TypesOfListings />
         <OnlineExpHome />

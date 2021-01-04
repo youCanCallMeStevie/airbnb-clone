@@ -1,6 +1,6 @@
 import React from "react";
 import { Modal, Col, Row } from "react-bootstrap";
-import PinkLogo from "../../Assets/AirBnb-Logos/airbnb_pink_solo_logo.png";
+import PinkLogo from "../../Assets/AirBnb-Logos/airbnb_pink_logo_no_text.png";
 import "../LanguageModal/LanguageModal.css";
 
 function LanguageModal({ toggleModal, showModal, selectedItem }) {

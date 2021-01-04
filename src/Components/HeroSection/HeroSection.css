@@ -1,4 +1,4 @@
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 665px) {
   .hero-text {
     font-size: 60px !important;
     top: 12% !important;
@@ -22,7 +22,7 @@
 .hero-text {
   position: absolute;
   z-index: 1;
-  top: 30%;
+  top: 22%;
   left: 5%;
   color: white;
   font-size: 100px;

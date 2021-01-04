@@ -1,7 +1,7 @@
 import React from "react";
 import { Col, Navbar, Row } from "react-bootstrap";
 import "../ExpandedSearchBar/ExpandedSearchBar.css";
-import PinkLogo from "../../Assets/AirBnb-Logos/airbnb_pink_solo_logo.png";
+import PinkLogo from "../../Assets/AirBnb-Logos/airbnb_pink_logo_no_text.png";
 import SearchIcon from "@material-ui/icons/Search";
 import LanguageIcon from "@material-ui/icons/Language";
 import MenuIcon from "@material-ui/icons/Menu";
@@ -11,11 +11,11 @@ import { Divider } from "@material-ui/core";
 
 export default function ExpandedSearchBar(
   {
-    //   handleChange,
-    //   handleSubmit,
-    //   clicked,
-    //   handleClick,
-    //   toggleModal,
+      handleChange,
+      handleSubmit,
+      clicked,
+      handleClick,
+      toggleModal,
   }
 ) {
   return (
@@ -39,14 +39,14 @@ export default function ExpandedSearchBar(
               </div>
               <div
                 className="choose-language"
-                //   onClick={() => toggleModal()}
+                  onClick={() => toggleModal()}
               >
                 <LanguageIcon />{" "}
               </div>
               <div
-              //   onClick={handleClick}
+                onClick={handleClick}
               >
-                {/* {clicked ? <UserDropDownMenu /> : null} */}
+                {clicked ? <UserDropDownMenu /> : null}
                 <div className="search-expanded-user-hamburger-wrapper">
                   <MenuIcon />
                   <PersonOutlineIcon />
@@ -99,7 +99,7 @@ export default function ExpandedSearchBar(
                 </Col>
                 <Col md="auto">
                   <div className="expanded-search-background">
-                    <span><SearchIcon /></span><span><p>Search</p></span>
+                    <span><SearchIcon /></span><span><p style={{paddingLeft:"2px", marginBottom:"10px"}}>Search</p></span>
                   </div>
                 </Col>
               </Row>

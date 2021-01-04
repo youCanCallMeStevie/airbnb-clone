@@ -1,0 +1,21 @@
+.add-dates-container {
+  width: 18rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.add-dates-container p {
+  margin: 0;
+}
+p.table-headings {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+Table,
+td {
+  border: 2px solid black;
+  border-radius: var(--border-radius);
+}
