@@ -52,7 +52,7 @@
 
 .search-filter-box {
   margin: auto;
-  width: 800px;
+  width: 900px;
   height: 50px;
   background-color: var(--grey-footer);
   border-radius: 50px;
@@ -84,10 +84,25 @@
 }
 
 .search-filter-items p {
-  font-size: 12px;
+  font-size: 10px;
   text-align: left;
 }
 
+.search-filter-item input {
+  letter-spacing: 0.05em;
+  outline: none !important;
+  border: none !important;
+  margin-top: 5px;
+  width: auto;
+  font-weight: 400;
+  background-color: transparent;
+  font-size: 12px;
+  margin: 0px;
+}
+
+.search-filter-item input::placeholder {
+  text-align: center;
+}
 .expanded-search-background {
   background-color: var(--airbnb-pink);
   height: 35px;
@@ -95,7 +110,6 @@
   border-radius: 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 .expanded-search-background .MuiSvgIcon-root {
