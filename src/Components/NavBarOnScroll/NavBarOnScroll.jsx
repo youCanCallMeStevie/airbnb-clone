@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useRef} from "react";
 import { Navbar } from "react-bootstrap";
 import "../NavBarOnScroll/NavBarOnScroll.css";
 import PinkLogo from "../../Assets/AirBnb-Logos/airbnb_pink_logo_no_text.png";
@@ -8,10 +8,10 @@ import MenuIcon from "@material-ui/icons/Menu";
 import PersonOutlineIcon from "@material-ui/icons/PersonOutline";
 import UserDropDownMenu from "../UserDropDownMenu/UserDropDownMenu";
 import ExpandedSearchBar from "../ExpandedSearchBar/ExpandedSearchBar";
+import useOutsideClick from "../../Utilites/Hooks/ClickOutside";
+
 
 export default function NavBarOnScroll({
-  handleChange,
-  handleSubmit,
   showSearch,
   expandSearch,
   clicked,
@@ -19,7 +19,14 @@ export default function NavBarOnScroll({
   toggleModal,
   handleOnScroll
 }) {
-  //function to make the top bar appear when scrolling
+  // const [searchActive, setSearchActive] = useState(false);
+
+  // const ref = useRef();
+
+  // useOutsideClick(ref, () => {
+  //     if (searchActive) setSearchActive(false);
+  //   });
+
  
   return (
     <div className="navbar-onscroll-container d-none">
@@ -34,7 +41,10 @@ export default function NavBarOnScroll({
           />
         </Navbar.Brand>
         <div className="navbar-item-wrap">
-          <div className="searchbox-button" onClick={expandSearch}>
+          <div 
+          className="searchbox-button" 
+          onClick={expandSearch}
+          >
             {showSearch || handleOnScroll ? (
               <ExpandedSearchBar
                 clicked={clicked}
@@ -49,6 +59,7 @@ export default function NavBarOnScroll({
               </span>
             </p>
           </div>
+        {/* )} */}
           <div className="hosting-wrapper">
             <span>
               <p>Switch to hosting</p>

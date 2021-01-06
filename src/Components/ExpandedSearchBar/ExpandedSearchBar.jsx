@@ -1,4 +1,4 @@
-import React, {useState, useRef } from "react";
+import React, {useState } from "react";
 import { Col, Navbar, Row } from "react-bootstrap";
 import "../ExpandedSearchBar/ExpandedSearchBar.css";
 import PinkLogo from "../../Assets/AirBnb-Logos/airbnb_pink_logo_no_text.png";
@@ -8,7 +8,6 @@ import MenuIcon from "@material-ui/icons/Menu";
 import PersonOutlineIcon from "@material-ui/icons/PersonOutline";
 import UserDropDownMenu from "../UserDropDownMenu/UserDropDownMenu";
 import { Divider } from "@material-ui/core";
-import useOutsideClick from "../../Utilites/Hooks/ClickOutside";
 
 
 export default function ExpandedSearchBar({
@@ -19,20 +18,19 @@ export default function ExpandedSearchBar({
 
 {
 
-    const [searchActive, setSearchActive] = useState(false);
-    const [search, setSearch] = useState("");
+    const [search, setSearch] = useState({location:'Los Angeles', startDate:'yyyy-MM-dd', endDate:'yyyy-MM-dd', guests: 1});
+const onSearchSubmit = () => {
+    let url = `http://localhost:3000/locations?`
+    for (let key in search) {
+        if(key==='location' && search[key].includes(' ')) {
+            search[key] = search[key].split(' ').join('%20')
 
-    const ref = useRef();
-
-    useOutsideClick(ref, () => {
-        if (searchActive) setSearchActive(true);
-      });
-
-    const submit = e => {
-      e.preventDefault();
-      alert(`We're having a look for ${search}`);
-      setSearch("");
-    };
+        }
+        url = url.concat(key + '='+search[key]+'&')
+    }
+    console.log(url)
+ // const response =   await fetch(`?date=${search.date}&location..`)
+}
   return (
     <div className="expanded-navbar-container">
       <Navbar>
@@ -80,11 +78,11 @@ export default function ExpandedSearchBar({
         </Row>
         <Row className="mt-2 search-filter-box">
           <Row className="search-filter-items">
-              <form>
+            
             <Col md="auto" className="search-filter-item">
               <p>Location</p>
                 <input
-                  value={search}
+                  value={search.location}
                   type="text"
                   placeholder="Where are you going?"
                   onChange={e => setSearch(e.target.value)}
@@ -95,7 +93,7 @@ export default function ExpandedSearchBar({
               <p>Check in </p>
 
               <input
-                  value={search}
+                  value={search.startDate}
                   type="date"
                   placeholder="Add dates"
                   onChange={e => setSearch(e.target.value)}
@@ -106,7 +104,7 @@ export default function ExpandedSearchBar({
             <Col md="auto" className="search-filter-item">
               <p>Check out </p>
               <input
-                  value={search}
+                  value={search.endDate}
                   type="date"
                   placeholder="Add dates"
                   onChange={e => setSearch(e.target.value)}
@@ -117,14 +115,14 @@ export default function ExpandedSearchBar({
             <Col md="auto" className="search-filter-item">
               <p>Guests </p>
               <input
-                  value={search}
+                  value={search.guests}
                   type="number"
                   placeholder="Add guests"
                   onChange={e => setSearch(e.target.value)}
                 />
             </Col>
             <Col md="auto">
-              <div className="expanded-search-background">
+              <div className="expanded-search-background" onClick={onSearchSubmit}>
                 <span>
                   <SearchIcon />
                 </span>
@@ -135,7 +133,7 @@ export default function ExpandedSearchBar({
                 </span>
               </div>
             </Col>
-            </form>
+          
           </Row>
         </Row>
       </Col>
