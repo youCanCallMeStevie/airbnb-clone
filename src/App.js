@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useRef } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import BottomIndex from "./Components/BottomIndex/BottomIndex";
@@ -11,6 +11,7 @@ import TypesOfListings from "./Components/TypesOfListings/TypesOfListings";
 import HostsBlock from "./Components/HostsBlock/HostsBlock";
 import OnlineExpHome from "./Components/OnlineExpHome/OnlineExpHome";
 import AddDatesForPrices from "./Components/AddDatesForPrices/AddDatesForPrices";
+import ListingPage from "./Components/ListingPage/ListingPage";
 
 class App extends Component {
   state = {
@@ -49,7 +50,7 @@ class App extends Component {
 
   expandSearch = async () => {
     this.setState({
-      showSearch: !this.state.showSearch,
+      showSearch:true,
     });
   };
 
@@ -59,9 +60,15 @@ class App extends Component {
     const searchBox = document.querySelector(".expanded-navbar-container");
     if (searchBox) {
       if (currentScrollPos <= maxScroll) {
-        searchBox?.classList.add("d-none");
+        //searchBox?.classList.add("d-none");
+        this.setState({
+          showSearch:false,
+        });
       } else {
-        searchBox?.classList.remove("d-none");
+       // searchBox?.classList.remove("d-none");
+        this.setState({
+          showSearch:false,
+        });
       }
     }
   };
@@ -119,14 +126,12 @@ class App extends Component {
           toggleModal={this.handleModalToggle}
           hideExpandedSearch={this.handleOnScroll}
         />
-       
         <HeroSection />
-        <AddDatesForPrices />
-
         <LocationIcons />
         <TypesOfListings />
         <OnlineExpHome />
         <HostsBlock />
+        <ListingPage/>
         <BottomIndex toggleModal={this.handleModalToggle} />
         <LanguageModal
           showModal={showModal}
